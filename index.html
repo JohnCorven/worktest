@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homeworke</title>
+    <link
+      rel="icon"
+      href="https://cdn.icon-icons.com/icons2/390/PNG/512/yin-yang_39441.png"
+      type="images/png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="add.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Домашнее задание по уроку № 2</h1>
+      </div>
+      <div>
+        <h2>Задача 1</h2>
+        <p class="task">Объясните почему код даёт именно такие результаты?</p>
+        <img
+          class="task-image"
+          width="500 px"
+          height="340 px"
+          src="images/screen_one.png"
+          alt="изображение"
+        />
+        <p class="task-explanation">
+          Таков принцип работы пре и пост инкрементов. Преинкремент сначала
+          увеличивает оригинальное значение, а затем присваивает значение
+          переменной. Постинкремент сначала присваивает оригинальное значение, а
+          затем увеличивает значение.<br /><br /><span class="blue">let a = 1, b = 1, c, d</span>
+          <br /><br />
+          <span class="orange">c = ++a </span>- инкрементирует "a" и присваивает "a" переменной "с" <br />
+          <span class="blue">a = 2, c = 2</span> <br /><br />
+          <span class="orange">d = b++</span> - присваивает "b" переменной "d" и инкрементирует "b" <br />
+          <span class="blue">b = 2, d = 1</span> <br /><br />
+          <span class="orange">c = 2 + ++a</span> - инкрементирует "a" складывает с числом "2" и присваивает
+          переменной "с" <br />
+          <span class="blue">a = 3, c = 5</span> <br /><br />
+          <span class="orange">d = 2 + b++</span> - складывает "b" с числом "2" присваивает переменной "d" и
+          инкрементирует "b" <br />
+          <span class="blue">b = 3, d = 4</span> <br /><br />
+          Итог: <span class="violet">a = 3, b = 3, c = 5, d = 4</span> (пример выводится в консоль)
+        </p>
+      </div>
+      <div>
+        <h2>Задача 2</h2>
+        <p class="task">
+          Чему будут равны переменные x и a в примере ниже? Написать почему так
+          произошло (описать последовательность действий).<br />
+          <span>let a = 2; let x = 1 + (a *= 2) // a = 4, x = 5</span>
+        </p>
+        <ul>
+          <li>присваивает значение "2" переменной "a"</li>
+          <li>умножает значение "a" равное "2" на число "2".</li>
+          <li>присваивает полученное число "4" переменной "a"</li>
+          <li>складывает число "1" со значением "4" переменной "a"</li>
+          <li>присваивает полученное число "5" переменной "x"</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Задача 3</h2>
+        <p class="task">
+          Объявить две переменные a и b и задать им целочисленные произвольные
+          начальные значения. <br />Затем написать скрипт, который работает по
+          следующему принципу:
+        </p>
+        <ul>
+          <li>
+            если a и b положительные, вывести их разность (ноль можно считать
+            положительным числом)
+          </li>
+          <li>если а и b отрицательные, вывести их произведение</li>
+          <li>
+            (этот пункт по сложнее, делайте по желанию) если а и b разных
+            знаков, вывести их сумму
+          </li>
+        </ul>
+        <p>
+          <span class = "violet">function task_three() {</span> <br />
+          <span class="blue">let a =</span> <span class="orange">Math.round(Math.random() * 10 * ((Math.random() - 0.5) * 2))</span>
+          // присваивает рандомное число от -9 до 9 <br />
+          <span class="blue">let b =</span> <span class="orange">Math.round(Math.random() * 10 * ((Math.random() - 0.5) * 2))</span>
+          // аналогично, так интересней просто) <br />
+          <span class="violet">if (a >= 0 && b >= 0) {</span> <br />
+          <span class="orange">console.log(a - b)</span> <br />
+          <span class = "violet">} else if (a &#60 0 && b &#60 0) {</span> <br />
+          <span class="orange">console.log(a * b)</span> <br />
+          <span class="violet">} else {</span> <br />
+          <span class="orange">console.log(a + b) </span><br />
+          <span class = "violet">}}</span> <br />
+        </p>
+      </div>
+      <div>
+        <h2>Задача 4</h2>
+        <p class="task">
+          Реализовать основные 4 арифметические операции (+, -, /, *) в виде
+          функций с двумя параметрами. Т.е. например, функция для сложения
+          должна принимать два числа, складывать их и возвращать результат.
+          Обязательно использовать оператор return.
+        </p>
+        <ul>
+          <li>const addition = (a, b) => a + b - функция cложения</li>
+          <li>const subtraction = (a, b) => a - b; - функция вычитания</li>
+          <li>const multiplication = (a, b) => a * b; - функция умножения</li>
+          <li>const division = (a, b) => a / b; - функция деления</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Задача 5</h2>
+        <p class="task">
+          Реализовать функцию с тремя параметрами: function mathOperation(arg1,
+          arg2, operation), где arg1, arg2 – значения аргументов, operation –
+          строка с названием операции. В зависимости от переданного значения
+          операции (использовать switch) выполнить одну из арифметических
+          операций (использовать функции из задания 4) и вернуть полученное
+          значение.
+        </p>
+        <p>
+          <span class="violet">function mathOperation(arg1, arg2, operation) {</span> <br />
+          <span class="violet">switch (operation) { </span><br />
+          <span class="orange">case "+":</span> <br />
+          <span class="blue">return addition(arg1, arg2)</span> <br />
+          <span class="violet">break; </span><br />
+          <span class="orange">case "-":</span> <br />
+          <span class="blue">return subtraction(arg1, arg2);</span> <br />
+          <span class="violet">break;</span> <br />
+          <span class="orange">case "*":</span> <br />
+          <span class="blue">return multiplication(arg1, arg2);</span> <br />
+          <span class="violet">break;</span> <br />
+          <span class="orange">case "/":</span> <br />
+          <span class="blue">return division(arg1, arg2);</span> <br />
+          <span class="violet">break;</span> <br />
+          <span class="orange">default:</span> <br />
+          <span class="blue">alert("неверная операция");</span> <br />
+          <span class="violet">} }</span>
+        </p>
+      </div>
+      <div>
+        <h2>Задача 6</h2>
+        <p class="task">
+          Программа должна спросить у пользователя число, это будет количество
+          денег, которое он хочет положить на счет в банке. Затем программа
+          должна выдать примерно такое сообщение:
+        </p>
+        <ul>
+          <li>
+            Ваша сумма в 101 рубль успешно зачислена." - в случае если
+            пользователь ввел 101
+          </li>
+          <li>
+            Ваша сумма в 10020 рублей успешно зачислена." - в случае если
+            пользователь ввел 10020
+          </li>
+          <li>
+            Ваша сумма в 120104 рубля успешно зачислена." - в случае если
+            пользователь ввел 120104
+          </li>
+        </ul>
+        <p class="task">
+          То есть ваша задача выводить слово «рубль» в правильном падеже, в
+          зависимости от введенного числа.
+        </p>
+      </div>
+      <div class="field">
+        <input
+          type="text"
+          name="stringEnter"
+          autocomplete="off"
+          placeholder="Какую сумму вы хотите зачислить?"
+          class="stringEnter"
+        />
+      </div>
+      <button class="but" onclick="transferAmount(wordVerification())">
+        зачислить
+      </button>
+      <button class="but" onclick="clearString()" onclick="clearString()">
+        очистить поле
+      </button>
+    </div>
+  </body>
+</html>
