@@ -140,10 +140,11 @@ function wordVerification() {
 function transferAmount(enrollmentReport) {
   let amount = document.querySelector(".stringEnter");
   amount.value = enrollmentReport;
-  enrollmentReport = "";
+  amount.innerHTML = amount.value;
 }
 
 function clearString() {
   let amount = document.querySelector(".stringEnter");
   amount.value = "";
 }
+transferAmount(wordVerification());
