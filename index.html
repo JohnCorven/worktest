@@ -5,182 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homeworke</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
-      href="https://cdn.icon-icons.com/icons2/390/PNG/512/yin-yang_39441.png"
+      href="images/the_wheel_of_time.png"
       type="images/png"
     />
-    <link rel="stylesheet" href="style.css" />
     <script defer src="add.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>Домашнее задание по уроку № 2</h1>
+        <div class="header-main"><h1>Homework</h1></div>
+        <div class="header-nav">
+          <ul class="header-list">
+            <li class="header-list-item">
+              <span class="but-task-1">Задание 1</span>
+            </li>
+            <li class="header-list-item">
+              <span class="but-task-2">Задание 2</span>
+            </li>
+            <li class="header-list-item">
+              <span class="but-task-3">Задание 3</span>
+            </li>
+            <li class="header-list-item">
+              <span class="but-task-4">Задание 4</span>
+            </li>
+            <li class="header-list-item">
+              <span class="but-task-5">Задание 5</span>
+            </li>
+            <li class="header-list-item">
+              <span class="but-task-6">Задание 6</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h2>Задача 1</h2>
-        <p class="task">Объясните почему код даёт именно такие результаты?</p>
-        <img
-          class="task-image"
-          width="500 px"
-          height="340 px"
-          src="images/screen_one.png"
-          alt="изображение"
-        />
-        <p class="task-explanation">
-          Таков принцип работы пре и пост инкрементов. Преинкремент сначала
-          увеличивает оригинальное значение, а затем присваивает значение
-          переменной. Постинкремент сначала присваивает оригинальное значение, а
-          затем увеличивает значение.<br /><br /><span class="blue">let a = 1, b = 1, c, d</span>
-          <br /><br />
-          <span class="orange">c = ++a </span>- инкрементирует "a" и присваивает "a" переменной "с" <br />
-          <span class="blue">a = 2, c = 2</span> <br /><br />
-          <span class="orange">d = b++</span> - присваивает "b" переменной "d" и инкрементирует "b" <br />
-          <span class="blue">b = 2, d = 1</span> <br /><br />
-          <span class="orange">c = 2 + ++a</span> - инкрементирует "a" складывает с числом "2" и присваивает
-          переменной "с" <br />
-          <span class="blue">a = 3, c = 5</span> <br /><br />
-          <span class="orange">d = 2 + b++</span> - складывает "b" с числом "2" присваивает переменной "d" и
-          инкрементирует "b" <br />
-          <span class="blue">b = 3, d = 4</span> <br /><br />
-          Итог: <span class="violet">a = 3, b = 3, c = 5, d = 4</span> (пример выводится в консоль)
-        </p>
+      <div class="main">
+        <div class="main-wrapper">
+          <div class="main-task-one">
+            <div class="main-task-code">
+              <p>for (let i = 0; i &#60= 10; i++) { <br>  if (i == 0) {<br>     console.log(`${i} - это ноль`);<br>  } else if (i % 2 == 0) {<br>     console.log(`${i} - четное число`);<br>  } else {<br>     console.log(`${i} - нечетное число`);<br>}};</p>
+            </div>
+            <div class="main-task-wrapper">
+              <p class="main-task-text">
+              С помощью цикла for написать алгоритм для вывода чисел от 0 до 10
+              включительно, чтобы результат выглядел так:
+              </p>
+                <ul class="main-task-item">
+                <li>0 – это ноль</li>
+                <li>1 – нечетное число</li>
+                <li>2 – четное число</li>
+                <li>3 – нечетное число</li>
+                <li>…</li>
+                <li>10 – четное число</li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-task-two">
+            <div class="main-task-code">
+              <p>const post = { <br>  author: "John", //вывести этот текст <br>  postId: 23, <br>  comments: [ <br>    { <br>      userId: 10, <br>      userName: "Alex", <br>      text: "lorem ipsum", <br>      rating: { <br>        likes: 10, <br>        dislikes: 2, //вывести это число <br>},}, <br>    { <br>      userId: 5, //вывести это число <br>      userName: "Jane", <br>      text: "lorem ipsum 2", //вывести этот текст <br>      rating: { <br>        likes: 3, <br>        dislikes: 1, <br>},},]; <br>console.log(post.author); <br>console.log(post.comments[0].rating.dislikes); <br>console.log(post.comments[1].userId); <br>console.log(post.comments[1].text);</p>
+            </div>
+            <div class="main-task-wrapper">
+              <p class="main-task-text">Выведите в консоль значения, указанные рядом с комментариями:</p>
+              <p class="main-code-style">const post = { <br>author: "John", //вывести этот текст <br>postId: 23, <br>comments: [ <br>{ <br>userId: 10, <br>userName: "Alex", <br>text: "lorem ipsum", <br>rating: { <br>likes: 10,<br>dislikes: 2 //вывести это число <br>} <br>}, <br>{ <br>userId: 5, //вывести это число <br>userName: "Jane", <br>text: "lorem ipsum 2", //вывести этот текст <br>rating: { <br>likes: 3, <br>dislikes: 1 <br>}}]}</p>
+            </div>
+          </div>
+          <div class="main-task-three">
+            <div class="main-task-code">
+              <p>const products = [ <br>  { <br>    id: 3, <br>    price: 200, <br>  }, <br>  { <br>    id: 4, <br>    price: 900, <br>  }, <br>  { <br>    id: 1, <br>    price: 1000, <br>  }, <br>]; <br>products.forEach((el) => { <br>  el.price -= (el.price / 100) * 15; <br>  console.log(el.price); <br>});</p>
+            </div>
+            <div class="main-task-wrapper">
+              <p class="main-task-text">Перед вами находится массив с продуктами, сегодня распродажа и вам нужно на каждый товар применить скидку
+              15%, можете использовать метод forEach <a href="https://mzl.la/2qROQkT">https://mzl.la/1AOMMWX</a> :</p>
+              <p class="main-code-style">const products = [ <br>{ <br>id: 3, <br>price: 200, <br>}, <br>{ <br>id: 4, <br>price: 900, <br>}, <br>{ <br>id: 1, <br>price: 1000, <br>}, <br>];</p>
+            </div>
+          </div>
+          <div class="main-task-four">
+            <div class="main-task-code"><p>const products = [ <br>  { <br>    id: 3, <br>    price: 127, <br>    photos: ["1.jpg", "2.jpg"] <br>  }, <br>  { <br>    id: 5, <br>    price: 499, <br>    photos: [] <br>  }, <br>  { <br>    id: 10, <br>    price: 26, <br>    photos: ["3.jpg"] <br>  }, <br>  { <br>    id: 8, <br>    price: 78, <br>  }, <br>] <br>const arrPhotos = products.filter((el) => { <br>  if (el.photos) { <br>    return el.photos.length > 0; <br>}}); <br>products.sort((a, b) => a.price - b.price); <br>console.log(arrPhotos); <br>console.log(products); <br>
+            </p></div>
+            <div class="main-task-wrapper">
+            <p class="main-task-text">Перед вами находится массив с продуктами в интернет-магазине. Вам нужно:</p>
+            <ul class="main-task-item">
+              <li> Получить все товары, у которых есть фотографии, можете использовать метод filter <a href=" https://mzl.la/2qROQkT">https://mzl.la/2qROQkT</a></li>
+              <li>Отсортируйте товары по цене (от низкой цены к высокой), можете использовать метод sort
+                <a href="
+                https://mzl.la/2Y79hbZ">https://mzl.la/2Y79hbZ</a></li>
+            </ul>
+            <p class="main-code-style">
+              const products = [ <br>{ <br>id: 3, <br>price: 127, <br>photos: [ <br>"1.jpg", <br>"2.jpg", <br>] <br>}, <br>{ <br>id: 5, <br>price: 499, <br>photos: [] <br>}, <br>{ <br>id: 10, <br>price: 26, <br>photos: [ <br>"3.jpg" <br>] <br>}, <br>{ <br>id: 8, <br>price: 78, <br>}, <br>]; <br>
+            </p>
+          </div>
+          </div>
+          <div class="main-task-five">
+            <div class="main-task-code"><p>for (let i = 0; i &#60 10; console.log(i++)) {}
+            </p></div>
+            <div class="main-task-wrapper">
+              <p class="main-task-text">Вывести с помощью цикла for числа от 0 до 9,
+              НЕ используя тело цикла. То есть выглядеть должно примерно так:</p>
+              <ul class="main-task-item">
+                <li>for(…){/* здесь пусто */}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-task-six">
+            <div class="main-task-code">
+              <p>for (let i = 0, x = ""; i &#60 20; i++) { <br>  x += "x";<br>  console.log(x);<br>}</p>
+            </div>
+            <div class="main-task-wrapper">
+              <p class="main-task-text">Нарисовать горку с помощью console.log (используя цикл for), как показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5:</p>
+              <p class="main-code-style">x<br>xx<br>xxx <br>xxxx <br>xxxxx</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h2>Задача 2</h2>
-        <p class="task">
-          Чему будут равны переменные x и a в примере ниже? Написать почему так
-          произошло (описать последовательность действий).<br />
-          <span>let a = 2; let x = 1 + (a *= 2) // a = 4, x = 5</span>
-        </p>
-        <ul>
-          <li>присваивает значение "2" переменной "a"</li>
-          <li>умножает значение "a" равное "2" на число "2".</li>
-          <li>присваивает полученное число "4" переменной "a"</li>
-          <li>складывает число "1" со значением "4" переменной "a"</li>
-          <li>присваивает полученное число "5" переменной "x"</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Задача 3</h2>
-        <p class="task">
-          Объявить две переменные a и b и задать им целочисленные произвольные
-          начальные значения. <br />Затем написать скрипт, который работает по
-          следующему принципу:
-        </p>
-        <ul>
-          <li>
-            если a и b положительные, вывести их разность (ноль можно считать
-            положительным числом)
-          </li>
-          <li>если а и b отрицательные, вывести их произведение</li>
-          <li>
-            (этот пункт по сложнее, делайте по желанию) если а и b разных
-            знаков, вывести их сумму
-          </li>
-        </ul>
-        <p>
-          <span class = "violet">function task_three() {</span> <br />
-          <span class="blue">let a =</span> <span class="orange">Math.round(Math.random() * 10 * ((Math.random() - 0.5) * 2))</span>
-          // присваивает рандомное число от -9 до 9 <br />
-          <span class="blue">let b =</span> <span class="orange">Math.round(Math.random() * 10 * ((Math.random() - 0.5) * 2))</span>
-          // аналогично, так интересней просто) <br />
-          <span class="violet">if (a >= 0 && b >= 0) {</span> <br />
-          <span class="orange">console.log(a - b)</span> <br />
-          <span class = "violet">} else if (a &#60 0 && b &#60 0) {</span> <br />
-          <span class="orange">console.log(a * b)</span> <br />
-          <span class="violet">} else {</span> <br />
-          <span class="orange">console.log(a + b) </span><br />
-          <span class = "violet">}}</span> <br />
-        </p>
-      </div>
-      <div>
-        <h2>Задача 4</h2>
-        <p class="task">
-          Реализовать основные 4 арифметические операции (+, -, /, *) в виде
-          функций с двумя параметрами. Т.е. например, функция для сложения
-          должна принимать два числа, складывать их и возвращать результат.
-          Обязательно использовать оператор return.
-        </p>
-        <ul>
-          <li>const addition = (a, b) => a + b - функция cложения</li>
-          <li>const subtraction = (a, b) => a - b; - функция вычитания</li>
-          <li>const multiplication = (a, b) => a * b; - функция умножения</li>
-          <li>const division = (a, b) => a / b; - функция деления</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Задача 5</h2>
-        <p class="task">
-          Реализовать функцию с тремя параметрами: function mathOperation(arg1,
-          arg2, operation), где arg1, arg2 – значения аргументов, operation –
-          строка с названием операции. В зависимости от переданного значения
-          операции (использовать switch) выполнить одну из арифметических
-          операций (использовать функции из задания 4) и вернуть полученное
-          значение.
-        </p>
-        <p>
-          <span class="violet">function mathOperation(arg1, arg2, operation) {</span> <br />
-          <span class="violet">switch (operation) { </span><br />
-          <span class="orange">case "+":</span> <br />
-          <span class="blue">return addition(arg1, arg2)</span> <br />
-          <span class="violet">break; </span><br />
-          <span class="orange">case "-":</span> <br />
-          <span class="blue">return subtraction(arg1, arg2);</span> <br />
-          <span class="violet">break;</span> <br />
-          <span class="orange">case "*":</span> <br />
-          <span class="blue">return multiplication(arg1, arg2);</span> <br />
-          <span class="violet">break;</span> <br />
-          <span class="orange">case "/":</span> <br />
-          <span class="blue">return division(arg1, arg2);</span> <br />
-          <span class="violet">break;</span> <br />
-          <span class="orange">default:</span> <br />
-          <span class="blue">alert("неверная операция");</span> <br />
-          <span class="violet">} }</span>
-        </p>
-      </div>
-      <div>
-        <h2>Задача 6</h2>
-        <p class="task">
-          Программа должна спросить у пользователя число, это будет количество
-          денег, которое он хочет положить на счет в банке. Затем программа
-          должна выдать примерно такое сообщение:
-        </p>
-        <ul>
-          <li>
-            Ваша сумма в 101 рубль успешно зачислена." - в случае если
-            пользователь ввел 101
-          </li>
-          <li>
-            Ваша сумма в 10020 рублей успешно зачислена." - в случае если
-            пользователь ввел 10020
-          </li>
-          <li>
-            Ваша сумма в 120104 рубля успешно зачислена." - в случае если
-            пользователь ввел 120104
-          </li>
-        </ul>
-        <p class="task">
-          То есть ваша задача выводить слово «рубль» в правильном падеже, в
-          зависимости от введенного числа.
-        </p>
-      </div>
-      <div class="field">
-        <input
-          type="text"
-          name="stringEnter"
-          autocomplete="off"
-          placeholder="Какую сумму вы хотите зачислить?"
-          class="stringEnter"
-        />
-      </div>
-      <button class="but" onclick="transferAmount(wordVerification())">
-        зачислить
-      </button>
-      <button class="but" onclick="clearString()" onclick="clearString()">
-        очистить поле
-      </button>
+      <div class="footer"></div>
     </div>
   </body>
 </html>

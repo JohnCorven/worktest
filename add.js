@@ -1,150 +1,209 @@
-// Задание 1
-function task_one() {
-  let a = 1,
-    b = 1,
-    c,
-    d;
-  c = ++a; // инкрементирует "a" и присваивает "a" переменной "с" (a = 2, c = 2)
-  console.log(c); // ответ: 2
-  //пример 2
-  d = b++; // присваивает "b" переменной "d" и инкрементирует "b" (b = 2, d = 1)
-  console.log(d); //ответ: 1
-  //пример 3
-  c = 2 + ++a; // инкрементирует "a" складывает с числом "2" и присваивает переменной "с" (a = 3, c = 5)
-  console.log(c); //ответ: 5
-  //пример 4
-  d = 2 + b++; // складывает "b" с числом "2" присваивает переменной "d" и инкрементирует "b" (b = 3, d = 4)
-  console.log(d); //ответ: 4
-  console.log(a, b, c, d); // 3 3 4 5
-}
+"use strict";
+let myLi = document.querySelectorAll(".header-list-item");
+myLi.forEach((el) => {
+  el.addEventListener("mouseover", (e) => {
+    e.target.style.color = "#fff";
+  });
+});
+myLi.forEach((el) => {
+  el.addEventListener("mouseout", (e) => {
+    e.target.style.color = "#001a7c";
+  });
+});
 
-// Задание 2
-function task_two() {
-  let a = 2; // присваивает значение "2" переменной "a"
-  let x = 1 + (a *= 2); // умножает значение "a" на число "2", складывает полученное число "4" с числом "1" и присваивает переменной "x"
-  console.log(a, x); // 4 5
-}
+let task_1 = document.querySelector(".but-task-1");
+let task_2 = document.querySelector(".but-task-2");
+let task_3 = document.querySelector(".but-task-3");
+let task_4 = document.querySelector(".but-task-4");
+let task_5 = document.querySelector(".but-task-5");
+let task_6 = document.querySelector(".but-task-6");
+let blockTaskOne = document.querySelector(".main-task-one");
+let blockTaskTwo = document.querySelector(".main-task-two");
+let blockTaskThree = document.querySelector(".main-task-three");
+let blockTaskFour = document.querySelector(".main-task-four");
+let blockTaskFive = document.querySelector(".main-task-five");
+let blockTaskSix = document.querySelector(".main-task-six");
+
+task_1.addEventListener("click", () => {
+  blockTaskOne.style.display = "block";
+  blockTaskTwo.style.display = "none";
+  blockTaskThree.style.display = "none";
+  blockTaskFour.style.display = "none";
+  blockTaskFive.style.display = "none";
+  blockTaskSix.style.display = "none";
+});
+task_2.addEventListener("click", () => {
+  blockTaskOne.style.display = "none";
+  blockTaskTwo.style.display = "block";
+  blockTaskThree.style.display = "none";
+  blockTaskFour.style.display = "none";
+  blockTaskFive.style.display = "none";
+  blockTaskSix.style.display = "none";
+});
+task_3.addEventListener("click", () => {
+  blockTaskOne.style.display = "none";
+  blockTaskTwo.style.display = "none";
+  blockTaskThree.style.display = "block";
+  blockTaskFour.style.display = "none";
+  blockTaskFive.style.display = "none";
+  blockTaskSix.style.display = "none";
+});
+task_4.addEventListener("click", () => {
+  blockTaskOne.style.display = "none";
+  blockTaskTwo.style.display = "none";
+  blockTaskThree.style.display = "none";
+  blockTaskFour.style.display = "block";
+  blockTaskFive.style.display = "none";
+  blockTaskSix.style.display = "none";
+});
+task_5.addEventListener("click", () => {
+  blockTaskOne.style.display = "none";
+  blockTaskTwo.style.display = "none";
+  blockTaskThree.style.display = "none";
+  blockTaskFour.style.display = "none";
+  blockTaskFive.style.display = "block";
+  blockTaskSix.style.display = "none";
+});
+task_6.addEventListener("click", () => {
+  blockTaskOne.style.display = "none";
+  blockTaskTwo.style.display = "none";
+  blockTaskThree.style.display = "none";
+  blockTaskFour.style.display = "none";
+  blockTaskFive.style.display = "none";
+  blockTaskSix.style.display = "block";
+});
+
+// Задание 1
+/**
+ * Выводит и обозначает (ноль, чётные и нечётные) числа от 0 до 10 включительно.
+ */
+const taskOne = () => {
+  for (let i = 0; i <= 10; i++) {
+    if (i == 0) {
+      console.log(`${i} - это ноль`);
+    } else if (i % 2 == 0) {
+      console.log(`${i} - четное число`);
+    } else {
+      console.log(`${i} - нечетное число`);
+    }
+  }
+};
+
+//Задание 2
+
+/**
+ * Выводит данные из объекта согласно заданию
+ */
+const taskTwo = () => {
+  const post = {
+    author: "John", //вывести этот текст
+    postId: 23,
+    comments: [
+      {
+        userId: 10,
+        userName: "Alex",
+        text: "lorem ipsum",
+        rating: {
+          likes: 10,
+          dislikes: 2, //вывести это число
+        },
+      },
+      {
+        userId: 5, //вывести это число
+        userName: "Jane",
+        text: "lorem ipsum 2", //вывести этот текст
+        rating: {
+          likes: 3,
+          dislikes: 1,
+        },
+      },
+    ],
+  };
+  console.log(post.author);
+  console.log(post.comments[0].rating.dislikes);
+  console.log(post.comments[1].userId);
+  console.log(post.comments[1].text);
+};
 
 //Задание 3
 /**
- * Функция создаёт два разных рандомных числа от -9 до 9 и выводит в консоль разность, сумму или произведение этих чисел.
- * Если оба числа положительные, то разность.
- * Если оба числа отрицательные, то произведение.
- * Если знаки разные, то сумму.
- * @var {number} a - первое рандомное число, определяемое автоматически.
- * @var {number} b - второе рандомное число, определяемое автоматически.
- * @returns {number} - возвращает число согласно условию.
+ * Даёт сскидку на товары 15% (изменяет значение в свойстве price)
  */
-function task_three() {
-  let a = Math.round(Math.random() * 10 * ((Math.random() - 0.5) * 2)); // присваивает рандомное число от -9 до 9
-  let b = Math.round(Math.random() * 10 * ((Math.random() - 0.5) * 2)); // аналогично, так интересней просто)
-  if (a >= 0 && b >= 0) {
-    console.log(a - b);
-  } else if (a < 0 && b < 0) {
-    console.log(a * b);
-  } else {
-    console.log(a + b);
-  }
-}
+const taskThree = () => {
+  const products = [
+    {
+      id: 3,
+      price: 200,
+    },
+    {
+      id: 4,
+      price: 900,
+    },
+    {
+      id: 1,
+      price: 1000,
+    },
+  ];
+  products.forEach((el) => {
+    el.price -= (el.price / 100) * 15;
+    console.log(el.price);
+  });
+};
 
 //Задание 4
 /**
- * функция сложения двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает сумму чисел a и b
+ * Передаёт в новый массив "arrPhotos" все товары с фотографиями (photo)
+ * Сортирует данные в массиве по возрастанию цены (price)
  */
-const addition = (a, b) => a + b;
-/**
- * функция вычитания двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает разность чисел a и b
- */
-const subtraction = (a, b) => a - b;
-/**
- * функция умножения двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает произведение чисел a и b
- */
-const multiplication = (a, b) => a * b;
-/**
- * функция деления двух чисел
- * @param {number} a - первое число
- * @param {number} b - второе число
- * @returns {number} - возвращает частное чисел a и b
- */
-const division = (a, b) => a / b;
+const taskFour = () => {
+  const products = [
+    {
+      id: 3,
+      price: 127,
+      photos: ["1.jpg", "2.jpg"],
+    },
+    {
+      id: 5,
+      price: 499,
+      photos: [],
+    },
+    {
+      id: 10,
+      price: 26,
+      photos: ["3.jpg"],
+    },
+    {
+      id: 8,
+      price: 78,
+    },
+  ];
+  const arrPhotos = products.filter((el) => {
+    if (el.photos) {
+      return el.photos.length > 0;
+    }
+  });
+
+  products.sort((a, b) => a.price - b.price);
+
+  console.log(arrPhotos);
+  console.log(products);
+};
 
 //Задание 5
 /**
- * функция реализовывает арифметические операции двух чисел (сложение, вычитание, умножение, деление)
- * @param {number} arg1 - первое число
- * @param {number} arg2 - второе число
- * @param {string} operation - выбрать одну из арифметических операций "+" "-" "*" "/"
- * @returns {number} возвращает число согласно выбранной арифметической операции
+ * Выводит числа от 0 до 9 не используя поле цикла for
  */
-function mathOperation(arg1, arg2, operation) {
-  switch (operation) {
-    case "+":
-      return addition(arg1, arg2);
-      break;
-    case "-":
-      return subtraction(arg1, arg2);
-      break;
-    case "*":
-      return multiplication(arg1, arg2);
-      break;
-    case "/":
-      return division(arg1, arg2);
-      break;
-    default:
-      alert("неверная операция");
-  }
-}
+const taskFive = () => {
+  for (let i = 0; i < 10; console.log(i++)) {}
+};
 
 //Задание 6
-function getEnterString() {
-  let amount = document.querySelector(".stringEnter");
-  if (amount.value == "") {
-    amount.value = "0";
+/**
+ * Выводит лесенку из 20 рядов "x" c помощью цикла for
+ */
+const taskSix = () => {
+  for (let i = 0, x = ""; i < 20; i++) {
+    x += "x";
+    console.log(x);
   }
-  return amount.value;
-}
-
-function wordVerification() {
-  let str = getEnterString();
-  let ruble = "";
-  let preLastLetter = str.charAt(str.length - 2);
-  let lastLetter = str.charAt(str.length - 1);
-  if (preLastLetter != 1) {
-    switch (lastLetter) {
-      case "1":
-        ruble = "рубль";
-        break;
-      case "2":
-      case "3":
-      case "4":
-        ruble = "рубля";
-        break;
-      default:
-        ruble = "рублей";
-    }
-  } else {
-    ruble = "рублей";
-  }
-  return `Ваша сумма в ${str} ${ruble} успешно зачислена.`;
-}
-
-function transferAmount(enrollmentReport) {
-  let amount = document.querySelector(".stringEnter");
-  amount.value = enrollmentReport;
-  amount.innerHTML = amount.value;
-}
-
-function clearString() {
-  let amount = document.querySelector(".stringEnter");
-  amount.value = "";
-}
-transferAmount(wordVerification());
+};
