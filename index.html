@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homeworke</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      href="images/the_wheel_of_time.png"
-      type="images/png"
-    />
+    <link rel="icon" href="images/the_wheel_of_time.png" type="images/png" />
     <script defer src="add.js"></script>
   </head>
   <body>
@@ -28,95 +24,47 @@
             <li class="header-list-item">
               <span class="but-task-3">Задание 3</span>
             </li>
-            <li class="header-list-item">
-              <span class="but-task-4">Задание 4</span>
-            </li>
-            <li class="header-list-item">
-              <span class="but-task-5">Задание 5</span>
-            </li>
-            <li class="header-list-item">
-              <span class="but-task-6">Задание 6</span>
-            </li>
           </ul>
         </div>
       </div>
       <div class="main">
         <div class="main-wrapper">
           <div class="main-task-one">
-            <div class="main-task-code">
-              <p>for (let i = 0; i &#60= 10; i++) { <br>  if (i == 0) {<br>     console.log(`${i} - это ноль`);<br>  } else if (i % 2 == 0) {<br>     console.log(`${i} - четное число`);<br>  } else {<br>     console.log(`${i} - нечетное число`);<br>}};</p>
-            </div>
             <div class="main-task-wrapper">
+              <div class="btn-wrapper ">
+                <button class="btn_task"><a href="task_1/index.html">Link</a></button>
+              </div>
               <p class="main-task-text">
-              С помощью цикла for написать алгоритм для вывода чисел от 0 до 10
-              включительно, чтобы результат выглядел так:
+                Посмотреть, как делается игра «крестики-нолики», видео находится
+                в папке «дополнительные видео» в материалах урока, также там
+                есть видео с некоторыми исправлениями, его тоже посмотрите.
+                Исходный код находится в примерах к уроку, в папке «tictaktoe (в
+                дз)».
               </p>
-                <ul class="main-task-item">
-                <li>0 – это ноль</li>
-                <li>1 – нечетное число</li>
-                <li>2 – четное число</li>
-                <li>3 – нечетное число</li>
-                <li>…</li>
-                <li>10 – четное число</li>
-              </ul>
             </div>
           </div>
           <div class="main-task-two">
-            <div class="main-task-code">
-              <p>const post = { <br>  author: "John", //вывести этот текст <br>  postId: 23, <br>  comments: [ <br>    { <br>      userId: 10, <br>      userName: "Alex", <br>      text: "lorem ipsum", <br>      rating: { <br>        likes: 10, <br>        dislikes: 2, //вывести это число <br>},}, <br>    { <br>      userId: 5, //вывести это число <br>      userName: "Jane", <br>      text: "lorem ipsum 2", //вывести этот текст <br>      rating: { <br>        likes: 3, <br>        dislikes: 1, <br>},},]; <br>console.log(post.author); <br>console.log(post.comments[0].rating.dislikes); <br>console.log(post.comments[1].userId); <br>console.log(post.comments[1].text);</p>
-            </div>
             <div class="main-task-wrapper">
-              <p class="main-task-text">Выведите в консоль значения, указанные рядом с комментариями:</p>
-              <p class="main-code-style">const post = { <br>author: "John", //вывести этот текст <br>postId: 23, <br>comments: [ <br>{ <br>userId: 10, <br>userName: "Alex", <br>text: "lorem ipsum", <br>rating: { <br>likes: 10,<br>dislikes: 2 //вывести это число <br>} <br>}, <br>{ <br>userId: 5, //вывести это число <br>userName: "Jane", <br>text: "lorem ipsum 2", //вывести этот текст <br>rating: { <br>likes: 3, <br>dislikes: 1 <br>}}]}</p>
-            </div>
-          </div>
-          <div class="main-task-three">
-            <div class="main-task-code">
-              <p>const products = [ <br>  { <br>    id: 3, <br>    price: 200, <br>  }, <br>  { <br>    id: 4, <br>    price: 900, <br>  }, <br>  { <br>    id: 1, <br>    price: 1000, <br>  }, <br>]; <br>products.forEach((el) => { <br>  el.price -= (el.price / 100) * 15; <br>  console.log(el.price); <br>});</p>
-            </div>
-            <div class="main-task-wrapper">
-              <p class="main-task-text">Перед вами находится массив с продуктами, сегодня распродажа и вам нужно на каждый товар применить скидку
-              15%, можете использовать метод forEach <a href="https://mzl.la/2qROQkT">https://mzl.la/1AOMMWX</a> :</p>
-              <p class="main-code-style">const products = [ <br>{ <br>id: 3, <br>price: 200, <br>}, <br>{ <br>id: 4, <br>price: 900, <br>}, <br>{ <br>id: 1, <br>price: 1000, <br>}, <br>];</p>
-            </div>
-          </div>
-          <div class="main-task-four">
-            <div class="main-task-code"><p>const products = [ <br>  { <br>    id: 3, <br>    price: 127, <br>    photos: ["1.jpg", "2.jpg"] <br>  }, <br>  { <br>    id: 5, <br>    price: 499, <br>    photos: [] <br>  }, <br>  { <br>    id: 10, <br>    price: 26, <br>    photos: ["3.jpg"] <br>  }, <br>  { <br>    id: 8, <br>    price: 78, <br>  }, <br>] <br>const arrPhotos = products.filter((el) => { <br>  if (el.photos) { <br>    return el.photos.length > 0; <br>}}); <br>products.sort((a, b) => a.price - b.price); <br>console.log(arrPhotos); <br>console.log(products); <br>
-            </p></div>
-            <div class="main-task-wrapper">
-            <p class="main-task-text">Перед вами находится массив с продуктами в интернет-магазине. Вам нужно:</p>
-            <ul class="main-task-item">
-              <li> Получить все товары, у которых есть фотографии, можете использовать метод filter <a href=" https://mzl.la/2qROQkT">https://mzl.la/2qROQkT</a></li>
-              <li>Отсортируйте товары по цене (от низкой цены к высокой), можете использовать метод sort
-                <a href="
-                https://mzl.la/2Y79hbZ">https://mzl.la/2Y79hbZ</a></li>
-            </ul>
-            <p class="main-code-style">
-              const products = [ <br>{ <br>id: 3, <br>price: 127, <br>photos: [ <br>"1.jpg", <br>"2.jpg", <br>] <br>}, <br>{ <br>id: 5, <br>price: 499, <br>photos: [] <br>}, <br>{ <br>id: 10, <br>price: 26, <br>photos: [ <br>"3.jpg" <br>] <br>}, <br>{ <br>id: 8, <br>price: 78, <br>}, <br>]; <br>
-            </p>
-          </div>
-          </div>
-          <div class="main-task-five">
-            <div class="main-task-code"><p>for (let i = 0; i &#60 10; console.log(i++)) {}
-            </p></div>
-            <div class="main-task-wrapper">
-              <p class="main-task-text">Вывести с помощью цикла for числа от 0 до 9,
-              НЕ используя тело цикла. То есть выглядеть должно примерно так:</p>
+              <div class="btn-wrapper ">
+                <button class="btn_task"><a href="task_2/index.html">Link</a></button>
+              </div>
+              <p class="main-task-text">
+                Сделать, чтобы при переключении слайдов слайды перемещались(пролистывались) вправо/влев  взависимости куда нажали, а не просто переключались.<br><br>Если вам трудно реализоват  слайдер самостоятельно, вы можете взять готовый слайдер из интернета. Либо можете взять оди  из этих:</p>
               <ul class="main-task-item">
-                <li>for(…){/* здесь пусто */}</li>
+                <li>https://dimsemenov.com/plugins/magnific-popup/</li>
+                <li> https://sachinchoolur.github.io/lightgallery.js/</li>
+                <li>https://idangero.us/swiper/ (очень гибкие возможности)</li>
               </ul>
             </div>
           </div>
-          <div class="main-task-six">
-            <div class="main-task-code">
-              <p>for (let i = 0, x = ""; i &#60 20; i++) { <br>  x += "x";<br>  console.log(x);<br>}</p>
-            </div>
+          <div class="main-task-three">
             <div class="main-task-wrapper">
-              <p class="main-task-text">Нарисовать горку с помощью console.log (используя цикл for), как показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5:</p>
-              <p class="main-code-style">x<br>xx<br>xxx <br>xxxx <br>xxxxx</p>
+              <div class="btn-wrapper ">
+                <button class="btn_task"><a href="task_3/index.html">Link</a></button>
+              </div>
+              <p class="main-task-text">Реализовать модуль корзины на странице. У каждого товара есть кнопка «Купить», при нажатии на которую происходит добавление id, имени и цены товара в блок корзины. Корзина должна уметь считать общую сумму заказа. Один товар можно добавить несколько раз. Товары на страницу можно добавить без применения js, т.е. просто сверстайте блоки на html/css</p>
             </div>
           </div>
-        </div>
       </div>
       <div class="footer"></div>
     </div>

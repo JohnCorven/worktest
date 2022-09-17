@@ -55,10 +55,7 @@
 
 .main-task-one,
 .main-task-two,
-.main-task-three,
-.main-task-four,
-.main-task-five,
-.main-task-six {
+.main-task-three {
   height: 100%;
   padding: 10px;
 }
@@ -69,15 +66,6 @@
   display: none;
 }
 .main-task-three {
-  display: none;
-}
-.main-task-four {
-  display: none;
-}
-.main-task-five {
-  display: none;
-}
-.main-task-six {
   display: none;
 }
 .main-task-item {
@@ -144,6 +132,7 @@ h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 50px;
   letter-spacing: 5px;
+  cursor: default;
 }
 
 a {
@@ -151,6 +140,30 @@ a {
 }
 a:visited {
   color: #283c6a;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2% 0px;
+}
+.btn_task {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid #7981eb;
+}
+
+.btn_task a {
+  color: #7981eb;
+  text-decoration: none;
+}
+.btn_task a:visited {
+  color: #7981eb;
+}
+
+.btn_task a:hover {
+  filter: brightness(1.5);
 }
 
 .main-wrapper::-webkit-scrollbar {

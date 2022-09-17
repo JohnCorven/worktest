@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #b9b9ff;
+}
+.container {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper_slides {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  background-color: #8b8ab5;
+  position: absolute;
+}
+.slide:nth-child(1) {
+  z-index: 2;
+}
+.src_circle_container {
+  display: flex;
+  justify-content: center;
+}
+.src_circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #e5e5ff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.src_circle:hover {
+  transform: scale(1.2);
+}
+.switching {
+  display: flex;
+  justify-content: center;
+}
+
+.full_picture {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  z-index: 30;
+  position: absolute;
+  top: 0;
+}
+.picture {
+  width: 800px;
+  height: 533px;
+  background-color: #8b8ab5;
+  animation: anim_full 0.5s linear;
+}
+
+.prev,
+.next {
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+}
+
+.next {
+  right: 0;
+}
+
+.full_screen {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 20;
+  filter: invert(1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: #e5e5ffbd;
+  margin-top: 5%;
+}
+.btn_wrapper a {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn_wrapper a:hover{
+  filter:brightness(1.3);
+  text-shadow: 0 0 3px #e0e0f7;
+}
+.btn_wrapper a:visited{
+  color: #7981eb;
+}
+
+.prev:hover,
+.next:hover {
+  transform: scale(1.2);
+}
+
+.src_circle_color {
+  background-color: #7981eb;
+}
+
+.anim_right {
+  animation: anim_right 0.5s ease-in-out;
+}
+.anim_left {
+  animation: anim_left 0.5s ease-in-out;
+}
+
+@keyframes anim_right {
+  from {
+    margin-left: 600px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes anim_left {
+  from {
+    margin-left: -600px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes anim_full {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

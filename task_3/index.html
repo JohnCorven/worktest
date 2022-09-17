@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping cart operation</title>
+    <link rel="icon" href="../images/the_wheel_of_time.png" type="images/png" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="add.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="btn_wrapper"><a href="../index.html">&crarr;</a></div>
+        <div class="header-products"><span>Магазин</span></div>
+        <div class="header-shopping">
+          <span class="header-shopping-counter">0</span
+          ><svg width="24" height="24" class="header-shopping-cart">
+            <path
+              fill="#eff1ff"
+              d="M6 6a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2h4a1 1 0 0 1 .986 1.164l-1.582 9.494A4 4 0 0 1 17.46 22H6.54a4 4 0 0 1-3.945-3.342L1.014 9.164A1 1 0 0 1 2 8h4V6Zm2 2h5a1 1 0 1 1 0 2H3.18l1.389 8.329A2 2 0 0 0 6.54 20h10.92a2 2 0 0 0 1.972-1.671L20.82 10H17a1 1 0 0 1-1-1V6a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <div class="products-block">
+        <div class="product">
+          <div class="product-name">Смартфон Samsung Galaxy S22</div>
+          <div class="product-desc">
+            <div class="product-id">
+              ID:
+              <span>9928</span>
+            </div>
+            Samsung Galaxy S22+ оснащен 6,6-дюймовым дисплеем AMOLED FHD+ с частотой обновления 120 Гц и рекордной яркостью 1750 кд/м2. Для селфи есть 10-мегапиксельная фронтальная камера, а на задней панели располагается 50-мегапиксельная основная камера, 12-мегапиксельный сверхширокоугольный модуль и 10-мегапиксельная телеобъектив.
+          </div>
+          <img class="product-image" src="image/SamsungS22.jpg" alt="картинка" />
+          <button class="product-btn">Описание</button>
+          <div class="product-purchase">
+            <div class="product-purchase-prise">1220$</div>
+            <img
+              class="product-purchase-buy"
+              src="image/cart_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-name">Фотоаппарат Fujifilm Instax Square SQ20</div>
+          <div class="product-desc">
+            <div class="product-id">
+              ID:
+              <span>E939</span>
+            </div>
+            Фотокамера моментальной печати Fujifilm Instax Square SQ20 выполнена с пластиковым черным корпусом весом всего 390 г, что позволяет переносить ее даже в кармане и не уставать во время долгого использования даже на вытянутой руке. Камера делает снимки с максимальным разрешением 1920x1920
+          </div>
+          <img class="product-image" src="image/FujifilmSQ20.jpg" alt="картинка" />
+          <button class="product-btn">Описание</button>
+          <div class="product-purchase">
+            <div class="product-purchase-prise">341$</div>
+            <img
+              class="product-purchase-buy"
+              src="image/cart_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-name">Ноутбук Apple MacBook Pro</div>
+          <div class="product-desc">
+            <div class="product-id">
+              ID:
+              <span>F005</span>
+            </div>
+            Ноутбук Apple MacBook Pro серебристый. Английская раскладка, 3024x1964, mini-LED, Apple M1 Pro, ядра: 6 + 2, RAM 16 ГБ, SSD 512 ГБ, Apple M1 Pro 14-core , macOS 
+          </div>
+          <img class="product-image" src="image/TC2mVNrNzF4.jpg" alt="картинка" />
+          <button class="product-btn">Описание</button>
+          <div class="product-purchase">
+            <div class="product-purchase-prise">2454$</div>
+            <img
+              class="product-purchase-buy"
+              src="image/cart_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-name">Телевизор LED Xiaomi Mi TV Q1E 55</div>
+          <div class="product-desc">
+            <div class="product-id">
+              ID:
+              <span>CA81</span>
+            </div>
+            Xiaomi Mi TV Q1E 55 - телевизор с диагональю 55 дюймов и с разрешение 4K. Панель изготовлена ​​по технологии QLED, которая обеспечивает яркие цвета, контрастные изображения и великолепную передачу черного. Dolby Vision и HDR 10+ обеспечивают исключительные уровни яркости и цвета независимо от изображения. 
+          </div>
+          <img class="product-image" src="image/XiaomiMiTVQ1E55.jpg" alt="картинка" />
+          <button class="product-btn">Описание</button>
+          <div class="product-purchase">
+            <div class="product-purchase-prise">937$</div>
+            <img
+              class="product-purchase-buy"
+              src="image/cart_icon.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="cart-block">
+        <div class="item-cart-block"></div>
+        <div class="total-cart-block">
+          <p>Общая стоимость:</p>
+          <span>0 $</span>
+          <button>Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
